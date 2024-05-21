@@ -1,0 +1,10 @@
+{
+  "extends": "solhint:recommended",
+  "rules": {
+    "const-name-snakecase": "off",
+    "immutable-vars-naming": "off",
+    "max-line-length": "off",
+    "quotes": ["warn", "double"],
+    "reason-string": ["warn", { "maxLength": 160 }]
+  }
+}

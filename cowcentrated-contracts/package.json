@@ -1,0 +1,62 @@
+{
+  "name": "beefy-clm-contracts",
+  "version": "1.0.0",
+  "description": "Beefy Cowcentrated Liquidity Manager ",
+  "main": "index.js",
+  "repository": "https://github.com/beefyfinance/cowcentrated-contracts.git",
+  "author": "Beefy",
+  "license": "MIT",
+  "engines": {
+    "node": "18.x",
+    "yarn": "1.x"
+},
+  "scripts": {
+    "compile": "hardhat compile",
+    "verify": "hardhat verify",
+    "deploy:clm": "hardhat run scripts/deployConcLiqVault.js --network",
+    "deploy:velo": "hardhat run scripts/deployVelo.js --network",
+    "deploy:factory": "hardhat run scripts/deployFactory.js --network",
+    "findTickWidth": "hardhat run scripts/findTickWidth.js --network mainnet",
+    "test:uniswap:ethusdt": "forge test --match-path test/forge/ConcLiqUniswapEthUsdt.t.sol --fork-url https://rpc.ankr.com/eth -vv",
+    "test:uniswap:wbtceth": "forge test --match-path test/forge/ConcLiqUniswapWbtcEth.t.sol --fork-url https://rpc.ankr.com/eth -vv",
+    "test:setters": "forge test --match-path test/forge/ConcLiqUniswapSetter.t.sol --fork-url https://rpc.ankr.com/eth -vv",
+    "test:scenario:a": "forge test --match-path test/forge/ScenarioA.t.sol --fork-url https://rpc.ankr.com/optimism -vv",
+    "test:scenario:b": "forge test --match-path test/forge/ScenarioB.t.sol --fork-url https://rpc.ankr.com/optimism -vv",
+    "test:velodrome": "forge test --match-path test/forge/ConcLiqVelodrome.t.sol --fork-url https://rpc.ankr.com/optimism -vv",
+    "coverage": "forge coverage --fork-url https://rpc.ankr.com/eth"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.0",
+    "@nomicfoundation/hardhat-foundry": "^1.0.1",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.2",
+    "@nomiclabs/hardhat-ethers": "^2.0.0",
+    "@openzeppelin-4/contracts": "npm:@openzeppelin/contracts",
+    "@openzeppelin/contracts-upgradeable": "^4.9.3",
+    "@typechain/ethers-v5": "^10.1.0",
+    "@typechain/hardhat": "^6.1.2",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": ">=9.1.0",
+    "chai": "^4.2.0",
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.14.0",
+    "hardhat-gas-reporter": "^1.0.8",
+    "solidity-coverage": "^0.8.1",
+    "ts-node": ">=8.0.0",
+    "typechain": "^8.1.0",
+    "typescript": ">=4.5.0"
+  },
+  "dependencies": {
+    "@axelar-network/axelar-gmp-sdk-solidity": "^5.3.0",
+    "@axelar-network/axelarjs-sdk": "^0.13.6",
+    "@chainlink/contracts-ccip": "^0.7.6",
+    "@nomicfoundation/hardhat-verify": "^1.1.0",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@openzeppelin/hardhat-upgrades": "^1.21.0",
+    "blockchain-addressbook": "^0.46.13",
+    "ethereum-waffle": "^4.0.10",
+    "forge-std": "^1.1.2",
+    "hardhat-verify": "^1.0.0",
+    "solmate": "^6.1.0"
+  }
+}

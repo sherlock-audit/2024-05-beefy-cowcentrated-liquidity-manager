@@ -1,0 +1,19 @@
+{
+  "detectors_to_exclude": "similar-names",
+  "filter_paths": "lib/|test/|mocks/|BytesLib|TickMath|FullMath|script/|node_modules/",
+  "solc_remaps": [
+    "ds-test/=lib/solmate/lib/ds-test/src/",
+    "@openzeppelin/=node_modules/@openzeppelin/",
+    "base64-sol/=node_modules/base64-sol/",
+    "forge-std/=node_modules/forge-std/",
+    "@axelar-network/=node_modules/@axelar-network/",
+    "@chainlink/=node_modules/@chainlink/",
+    "@eth-optimism/=node_modules/@eth-optimism/",
+    "@ethereum-waffle/=node_modules/@ethereum-waffle/",
+    "@openzeppelin-4/=node_modules/@openzeppelin-4/",
+    "eth-gas-reporter/=node_modules/eth-gas-reporter/",
+    "hardhat/=node_modules/hardhat/",
+    "solmate/=node_modules/solmate/"
+  ],
+  "compile_force_framework": "foundry"
+}
